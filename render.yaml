@@ -14,4 +14,4 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: Junior
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: @IAn8n.
+        value: "@IAn8n."
