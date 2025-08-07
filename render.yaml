@@ -7,21 +7,23 @@ services:
     dockerfilePath: ./Dockerfile
     autoDeploy: true
     envVars:
+      - key: DB_TYPE
+        value: postgresdb
       - key: N8N_PORT
-        value: 5678
+        value: "5678"
       - key: N8N_BASIC_AUTH_ACTIVE
-        value: true
+        value: "true"
       - key: N8N_BASIC_AUTH_USER
-        value: Junior
+        value: "Junior"
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "@IAn8n."
       - key: DB_POSTGRESDB_HOST
-        value: db.lcjdpyxcxffgwtxqmchh.supabase.co
+        value: "db.lcjdpyxcxffgwtxqmchh.supabase.co"
       - key: DB_POSTGRESDB_PORT
-        value: 5432
+        value: "5432"
       - key: DB_POSTGRESDB_DATABASE
-        value: postgres
+        value: "postgres"
       - key: DB_POSTGRESDB_USER
-        value: postgres
+        value: "postgres"
       - key: DB_POSTGRESDB_PASSWORD
         value: "@IAn8n-supabase."
