@@ -15,3 +15,13 @@ services:
         value: Junior
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "@IAn8n."
+      - key: DB_POSTGRESDB_HOST
+        value: db.lcjdpyxcxffgwtxqmchh.supabase.co
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
+      - key: DB_POSTGRESDB_USER
+        value: postgres
+      - key: DB_POSTGRESDB_PASSWORD
+        value: "@IAn8n-supabase."
