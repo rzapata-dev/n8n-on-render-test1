@@ -5,7 +5,8 @@ ENV N8N_HOST=0.0.0.0
 
 COPY test-ipv6.sh /test-ipv6.sh
 RUN chmod +x /test-ipv6.sh
+RUN /test-ipv6.sh
 
 EXPOSE 5678
 
-ENTRYPOINT ["/test-ipv6.sh"]
+ENTRYPOINT ["n8n"]
