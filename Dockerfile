@@ -1,12 +1,16 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:latest
 
-ENV N8N_PORT=5678
-ENV N8N_HOST=0.0.0.0
+# Cambiamos a root temporalmente para copiar y dar permisos
+USER root
 
-COPY test-ipv6.sh /test-ipv6.sh
-RUN chmod +x /test-ipv6.sh
-RUN /test-ipv6.sh
+# Copiamos el script a /usr/local/bin dentro del contenedor
+COPY test-ipv6.sh /usr/local/bin/test-ipv6.sh
 
-EXPOSE 5678
+# Le damos permisos de ejecución
+RUN chmod +x /usr/local/bin/test-ipv6.sh
 
-ENTRYPOINT ["n8n"]
+# Opcional: ejecutarlo en build para ver si hay IPv6
+RUN /usr/local/bin/test-ipv6.sh || true
+
+# Volvemos al usuario normal para n8n
+USER node
